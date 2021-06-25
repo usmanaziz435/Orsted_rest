@@ -24,5 +24,5 @@ EXPOSE 5000
 
 CMD ["python","./api/etl_orsted.py"]
 
-#CMD ["python","./api/Rest_call.py"]
+CMD ["python","./api/Rest_call.py"]
 
