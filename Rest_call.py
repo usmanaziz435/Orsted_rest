@@ -1,3 +1,4 @@
+#Package Installation.
 from flask import Flask
 from flask_restful import Api, Resource, reqparse
 import pandas as pd
@@ -5,10 +6,12 @@ import sqlalchemy as sa
 import psycopg2
 import json
 
-
+#Define Global Attributes use in script
 app = Flask(__name__)
 api = Api(app)
 engine = sa.create_engine('postgresql+psycopg2://postgres:dbc@localhost:5432/Rest_API')
+
+#Class to add objects for Rest API get.
 class Users(Resource):
 
 
@@ -58,6 +61,7 @@ class Users(Resource):
 # Add URL endpoints
 api.add_resource(Users, '/users')
 
+#added 0.0.0.0 so that i can access using localhost from container as database is not working so i can run through the process from my machine.
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
 
