@@ -2,7 +2,7 @@
 Orsted casestudy
 
 
-This repo  is based on the casestudy of orsted.
+This repo  is based on the casestudy of orsted and minimum viable product.
 
 It has following components.
 
