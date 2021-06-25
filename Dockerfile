@@ -7,6 +7,7 @@ RUN apt-get update \
     && apt-get -y install libaio-dev \
     && mkdir -p /opt/data/api
 
+#Adding scripts
 ADD ./etl_orsted.py /opt/data/api/
 ADD ./Rest_call.py /opt/data/api/
 
@@ -20,8 +21,10 @@ RUN  pip install flask
 RUN  pip install flask_restful
 RUN  pip install numpy
 
+#Exposing to 5000 port for flask applciation
 EXPOSE 5000
 
+#Execution
 CMD ["python","./api/etl_orsted.py"]
 
 CMD ["python","./api/Rest_call.py"]
