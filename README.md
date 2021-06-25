@@ -6,13 +6,11 @@ This repo  is based on the casestudy of orsted and minimum viable product.
 
 It has following components.
 
-1.Py Virtual env having all the packages to run this code.
+1.Py script etl_orsted.py whole ETL is going on this script.(Copy randomly generated Dataframe to Postgres SQL) 1000,000 Rows in Market_Data table.
 
-2.Py script etl_orsted.py whole ETL is going on this script.(Copy randomly generated Dataframe to Postgres SQL) 1000,000 Rows in Market_Data table.
+2.Py script Rest_call.py is a REST API exposing data from database to Customized rest call to perform simple Aggregates and Filtering.
 
-3.Py script Rest_call.py is a REST API exposing data from database to Customized rest call to perform simple Aggregates and Filtering.
-
-4.Docker file to Host the whole solution both Python files along with dependencies.
+3.Docker file to Host the whole solution both Python files along with dependencies.
 
 # Limitations.
 
