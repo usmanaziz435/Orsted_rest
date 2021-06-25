@@ -1,8 +1,11 @@
+#Package Installation.
 import pandas as pd
 import numpy as np
 import sqlalchemy as sa
 import psycopg2
 
+
+#Methods for Random data generator and Postgress connection we can use Azure and AWS secrets to manage the passwords.
 def get_raw_data(dt_from: pd.Timestamp, dt_to: pd.Timestamp) -> pd.DataFrame:
     """
     Generates (random) trade data
@@ -56,7 +59,7 @@ def sql_conn():
     engine = sa.create_engine('postgresql+psycopg2://postgres:dbc@localhost:5432/Rest_API')
     return engine
 
-
+#Main to call all the functions.
 if __name__=='__main__':
     alpha = get_raw_data(pd.Timestamp(2021,1,1,12),pd.Timestamp(2021,1,31,12))
     print(alpha.head())
