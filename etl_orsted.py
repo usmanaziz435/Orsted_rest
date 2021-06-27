@@ -56,7 +56,7 @@ def get_raw_data(dt_from: pd.Timestamp, dt_to: pd.Timestamp) -> pd.DataFrame:
     return df_raw
 
 def sql_conn():
-    engine = sa.create_engine('postgresql+psycopg2://postgres:dbc@localhost:5432/Rest_API')
+    engine = sa.create_engine('postgresql+psycopg2://postgres:dbc@192.168.1.14:5433/Market_API')
     return engine
 
 #Main to call all the functions.

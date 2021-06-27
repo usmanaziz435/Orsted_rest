@@ -9,7 +9,7 @@ import json
 #Define Global Attributes use in script
 app = Flask(__name__)
 api = Api(app)
-engine = sa.create_engine('postgresql+psycopg2://postgres:dbc@localhost:5432/Rest_API')
+engine = sa.create_engine('postgresql+psycopg2://postgres:dbc@192.168.1.14:5433/Market_API')
 
 #Class to add objects for Rest API get.
 class Users(Resource):
